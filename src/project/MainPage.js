@@ -91,7 +91,7 @@ function MainPage() {
               <th className="match">Match</th>
               <th className="League">League</th>
               <th className="team">Team 2</th>
-              <th className="">Team 1</th>
+              {/* <th className="">Team 1</th> */}
               <th className="state">State</th>
               <th className="percentage">Last 5 Matchs</th>
               <th className="result">Result(Team2)</th>
@@ -105,7 +105,7 @@ function MainPage() {
                   <td className="match">{val.match}</td>
                   <td className="league">{val.league}</td>
                   <td className="team">{val.team2}</td>
-                  <td className="">{val.team1}</td>
+                  {/* <td className="">{val.team1}</td> */}
                   <td className="state">
                     <label className={val.state}>{val.state}</label>
                   </td>
