@@ -55,23 +55,24 @@ const AddPlayer = () => {
     return e.target.value;
   };
   return (
-    <div className="ui-form card col-12">
+    
+    <div className="ui-form card grid">
       <form id="addPlayer" onSubmit={handlePlayerScore}>
-        <div className="form-elements col-4 ">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Match</label>
           <select name="match" onChange={playerChange}>
             <option value="T20">T20</option>
             <option value="ODI">ODI</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Gender</label>
           <select name="gender" onChange={playerChange}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>League</label>
           <select name="league" onChange={playerChange}>
             <option value="BBL">BBl League</option>
@@ -79,18 +80,18 @@ const AddPlayer = () => {
             <option value="IPL">IPL</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Player Name</label>
           <input type="text" name="player" onChange={playerChange} />
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Captain</label>
           <select name="captain" onChange={playerChange}>
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Batting position</label>
           <select name="position" onChange={playerChange}>
             <option value="1">1</option>
@@ -103,7 +104,7 @@ const AddPlayer = () => {
             <option value="8">8</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>About</label>
           <select name="about" onChange={playerChange}>
             <option value="Wk">Wicket Keeper</option>
@@ -111,11 +112,11 @@ const AddPlayer = () => {
             <option value="All">All Rounder</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Score</label>
           <input type="number" name="score" onChange={playerChange} />
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Result</label>
           <select name="result" onChange={playerChange}>
             <option value="Win">Win</option>

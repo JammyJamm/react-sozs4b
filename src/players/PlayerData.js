@@ -3,7 +3,7 @@ import AddPlayer from "./AddPlayer";
 import { collection, getDocs, query } from "@firebase/firestore";
 import db from "../FirbaseConfig";
 const PlayerData = () => {
-    const [playerData,setPlayerData] = useState("")
+    const [playerData,setPlayerData] = useState([])
   const [detail, setDetail] = useState([]);
   const userData = async () => {
     // document.getElementById("loaderSpinner").style.display = "flex";
@@ -42,22 +42,23 @@ const PlayerData = () => {
 
   return (
     <div className="ui-player">
-      <form id="playerFilter" className="ui-form card col-12">
-        <div className="form-elements col-4 ">
+      <div class="grid">
+  <form id="playerFilter" className="ui-form card col-12">
+        <div className="form-elements g-col-6 g-col-md-4 ">
           <label>Match</label>
           <select name="match" onChange={handleFilter}>
             <option value="T20">T20</option>
             <option value="ODI">ODI</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>Gender</label>
           <select name="gender" onChange={handleFilter}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
-        <div className="form-elements col-4">
+        <div className="form-elements g-col-6 g-col-md-4">
           <label>League</label>
           <select name="league" onChange={handleFilter}>
             <option value="BBL">BBl League</option>
@@ -66,6 +67,8 @@ const PlayerData = () => {
           </select>
         </div>
       </form>
+</div>
+ 
       <div className="card col-12">
         <table>
           <thead>
@@ -94,7 +97,6 @@ const PlayerData = () => {
           </tbody>
         </table>
       </div>
-      <AddPlayer />
     </div>
   );
 };
