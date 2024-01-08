@@ -1,0 +1,27 @@
+body {
+    background-color: #f1f2f3;
+   .ui-app-layout{
+    margin-bottom: 72px;
+   }
+   nav .navbar-nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    li{
+        padding: 0px 16px;
+    }  
+}
+.card{
+    
+  background-color: #fff;
+    padding:16px 16px;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+    .btn-container{
+        padding-top: 16px;
+    }
+}
+}
+

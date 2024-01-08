@@ -7,8 +7,10 @@ import Nav from "./Nav";
 // import "bootstrap/dist/js/bootstrap.min.js";
 function App() {
   return (
-    <div className="ui-app-layout">
-     <Nav />
+    <div className="ui-app-layout container-fluid">
+      <div className="row">
+        <Nav />
+      </div>
     </div>
   );
 }

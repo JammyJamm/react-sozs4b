@@ -17,7 +17,7 @@ const PlayerData = () => {
       ...doc.data(),
     }));
     setDetail(data);
-    handleFilter(data);
+    handleFilter();
    
     // document.getElementById("loaderSpinner").style.display = "none";
   };
@@ -26,7 +26,7 @@ const PlayerData = () => {
   }, []);
 
   /// userData
-  const handleFilter = (data) => {
+  const handleFilter = () => {
     const addForm = document.querySelector("#playerFilter");
     const selectMatch = addForm.match;
     const selectGender = addForm.gender;
@@ -37,37 +37,38 @@ const PlayerData = () => {
          league === selectLeague.value &&
          gender === selectGender.value
     );
-    setPlayerData(ds)
+    setPlayerData(ds) 
   };
 
   return (
     <div className="ui-player">
-      <div class="grid">
-  <form id="playerFilter" className="ui-form card col-12">
-        <div className="form-elements g-col-6 g-col-md-4 ">
-          <label>Match</label>
-          <select name="match" onChange={handleFilter}>
+        <div className="card">  
+        <form id="playerFilter" className="row">
+        <div className="col col-sm-4">
+          <label className="form-label">Match</label>
+          <select name="match" className="form-select" onChange={handleFilter}>
             <option value="T20">T20</option>
             <option value="ODI">ODI</option>
           </select>
         </div>
-        <div className="form-elements g-col-6 g-col-md-4">
-          <label>Gender</label>
-          <select name="gender" onChange={handleFilter}>
+        <div className="col col-sm-4">
+          <label className="form-label">Gender</label>
+          <select name="gender" className="form-select" onChange={handleFilter}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
-        <div className="form-elements g-col-6 g-col-md-4">
-          <label>League</label>
-          <select name="league" onChange={handleFilter}>
+        <div className="col col-sm-4">
+          <label className="form-label">League</label>
+          <select name="league" className="form-select" onChange={handleFilter}>
             <option value="BBL">BBl League</option>
             <option value="InterNational">International</option>
             <option value="IPL">IPL</option>
           </select>
         </div>
       </form>
-</div>
+      </div>
+
  
       <div className="card col-12">
         <table>
