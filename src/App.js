@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import DataLayout from './project/DataLayout';
+import DataLayout from './DataLayout';
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "jquery/dist/jquery.min.js";

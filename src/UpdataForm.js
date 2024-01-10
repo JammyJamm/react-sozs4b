@@ -1,15 +1,15 @@
-import { doc, updateDoc } from "firebase/firestore";
-import db from "../FirbaseConfig";
-import React from "react";
+import { doc, updateDoc } from 'firebase/firestore';
+import db from './FirbaseConfig';
+import React from 'react';
 function UpdataForm() {
   // Form upodated - Form to Database
   const handleUpdateFormSubmit = (e) => {
     e.preventDefault();
-    const getSelectedLineValue = document.getElementById("selectedLine").value;
+    const getSelectedLineValue = document.getElementById('selectedLine').value;
     if (getSelectedLineValue != undefined) {
       // const examcollref = doc(db, "cricket", "4Rq2HGQU2mXq787L3Gfd");
-      const examcollref = doc(db, "cricket", getSelectedLineValue);
-      const updateForm = document.querySelector("#editDataItem");
+      const examcollref = doc(db, 'cricket', getSelectedLineValue);
+      const updateForm = document.querySelector('#editDataItem');
       updateDoc(examcollref, {
         match: updateForm.match.value,
         league: updateForm.league.value,
@@ -21,13 +21,13 @@ function UpdataForm() {
         selectedLine: updateForm.selectedLine.value,
       })
         .then((response) => {
-          alert("updated from form");
+          alert('updated from form');
         })
         .catch((error) => {
           console.log(error.message);
         });
     } else {
-      alert("Please select some value line item");
+      alert('Please select some value line item');
     }
   };
   // Form Updated - DataBase to updated form

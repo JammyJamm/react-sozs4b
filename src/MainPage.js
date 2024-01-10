@@ -1,4 +1,4 @@
-import db from '../FirbaseConfig';
+import db from './FirbaseConfig';
 import {
   collection,
   deleteDoc,

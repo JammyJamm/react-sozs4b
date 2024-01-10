@@ -1,12 +1,12 @@
-import React from "react";
-import { collection, addDoc } from "firebase/firestore";
-import db from "../FirbaseConfig";
+import React from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import db from './FirbaseConfig';
 
 function AddData() {
-  const colRef = collection(db, "cricket");
+  const colRef = collection(db, 'cricket');
   const handleAddSubmit = (e) => {
     e.preventDefault();
-    const addForm = document.querySelector("#addData");
+    const addForm = document.querySelector('#addData');
     addDoc(colRef, {
       match: addForm.match.value,
       league: addForm.league.value,
@@ -17,7 +17,7 @@ function AddData() {
       result: addForm.result.value,
     })
       .then((response) => {
-        alert("Added");
+        alert('Added');
       })
       .catch((error) => {
         console.log(error.message);
